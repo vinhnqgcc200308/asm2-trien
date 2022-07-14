@@ -1,0 +1,38 @@
+<h2 class="titlenname" style = "text-align: center">
+    <img src="/img/toy.png" style="max-width: 10%;">
+    Company Information List 
+</h2>
+<a href="/com" class="btn btn-primary">
+        <i class="fa fa-plus"> </i> Add New Company
+    </a>
+<table class="table table-striped">
+    <thead class="table">
+        <tr class="titlenname">
+            <th>Full Company Name</th>
+            <th>Email</th>
+            <th>Mobile</th>
+            <th>City</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody class="table">
+        {{#each list}}
+        <tr>
+            <td>{{this.comName}}</td>
+            <td>{{this.email}}</td>
+            <td>{{this.mobile}}</td>
+            <td>{{this.city}}</td>
+            <td>
+                <a href="/toy/{{this._id}}">
+                    <i class="fa fa-pencil fa-lg" style="color:red" aria-hidden="true"></i>
+                </a>
+                <a href="/toy/delete/{{this._id}}" onclick="return confirm('Are you sure to delete this record?');">
+                    <i class="fa fa-trash fa-lg" aria-hidden="true" style="color:red" >
+
+                    </i>
+                </a>
+            </td>
+        </tr>
+        {{/each}}
+    </tbody>
+</table>

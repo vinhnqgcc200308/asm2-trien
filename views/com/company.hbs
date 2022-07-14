@@ -1,0 +1,39 @@
+<h2 class="titlenname" style = "text-align: center">
+    <img src="/img/toy.png" style="max-width: 10%;">
+    {{viewTitle}}
+</h2>
+<form action="/company" method="POST" autocomplete="off">
+    <input type="hidden" name="_id" value="{{com._id}}">
+    <div class="form-group titlenname">
+        <label>Full Company Name</label>
+        <input type="text" class="form-control" name="comName" value="{{com.comName}}" placeholder="Full Company Name">
+        <div class="text-danger">
+            {{com.comNameError}}
+        </div>
+    </div>
+    <div class="form-group titlenname">
+        <label>Email</label>
+        <input type="email" class="form-control" name="email" value="{{com.email}}" placeholder="Email">
+        <div class="text-danger">
+            {{com.emailError}}
+        </div>
+    </div>
+    <div class="form-row ">
+        <div class="form-group md-6 titlenname">
+            <label>Mobile</label>
+            <input type="text" name="mobile" placeholder="Mobile" value="{{com.mobile}}" class="form-control">
+
+        </div>
+        <div class="form-group md-6 titlenname">
+            <label>City</label>
+            <input type="text" name="city" placeholder="City" value="{{com.city}}" class="form-control">
+        </div>
+    </div>
+
+    <div class="form-group titlenname">
+        <button type="submit" class="btn btn-success"><i class="fa fa-database"></i> Submit</button>
+        <a href="/com/list" class="btn btn-primary">
+            <i class="fa fa-list-alt"></i> View All
+        </a>
+    </div>
+</form>

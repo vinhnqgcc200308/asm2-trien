@@ -1,0 +1,38 @@
+<h2 class="titlenname" style = "text-align: center">
+    <img src="/img/toy.png" style="max-width: 10%;">
+    Toy List 
+</h2>
+<a href="/toy" class="btn btn-primary">
+        <i class="fa fa-plus"> </i> Create New
+    </a>
+<table class="table table-striped">
+    <thead class="table">
+        <tr class="titlenname">
+            <th>Full Name</th>
+            <th>Amount</th>
+            <th>Price Per Item</th>
+            <th>Company</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody class="table">
+        {{#each list}}
+        <tr>
+            <td>{{this.fullName}}</td>
+            <td>{{this.amount}}</td>
+            <td>{{this.price}}</td>
+            <td>{{this.company}}</td>
+            <td>
+                <a href="/toy/{{this._id}}">
+                    <i class="fa fa-pencil fa-lg" style="color:red" aria-hidden="true"></i>
+                </a>
+                <a href="/toy/delete/{{this._id}}" onclick="return confirm('Are you sure to delete this record?');">
+                    <i class="fa fa-trash fa-lg" aria-hidden="true" style="color:red" >
+
+                    </i>
+                </a>
+            </td>
+        </tr>
+        {{/each}}
+    </tbody>
+</table>

@@ -1,0 +1,42 @@
+<h2 class="titlenname" style = "text-align: center">
+    <img src="/img/toy.png" style="max-width: 10%;">
+    {{viewTitle}}
+</h2>
+<form action="/toy" method="POST" autocomplete="off">
+    <input type="hidden" name="_id" value="{{toy._id}}">
+    <div class="form-group titlenname">
+        <label>Full Name</label>
+        <input type="text" class="form-control" name="fullName" value="{{toy.fullName}}" placeholder="Full Name">
+        <div class="text-danger">
+            {{toy.fullNameError}}
+        </div>
+    </div>
+    <div class="form-group titlenname">
+        <label>Amount</label>
+        <input type="text" class="form-control" name="amount" value="{{toy.amount}}" placeholder="Amount">
+        <div class="text-danger">
+            {{toy.amountError}}
+        </div>
+    </div>
+    <div class="form-group titlenname">
+        <label>Price Per Item</label>
+        <input type="text" class="form-control" name="price" value="{{toy.price}}" placeholder="Price Per Item">
+        <div class="text-danger">
+            {{toy.priceError}}
+        </div>
+    </div>
+    <div class="form-group titlenname">
+        <label>Company</label>
+        <input type="text" class="form-control" name="company" value="{{toy.company}}" placeholder="Company">
+        <div class="text-danger">
+            {{toy.companyError}}
+        </div>
+    </div>
+
+    <div class="form-group titlenname">
+        <button type="submit" class="btn btn-success"><i class="fa fa-database"></i> Submit</button>
+        <a href="/toy/list" class="btn btn-primary">
+            <i class="fa fa-list-alt"></i> View All
+        </a>
+    </div>
+</form>
